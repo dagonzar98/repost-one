@@ -12,20 +12,27 @@ export class MyElement extends LitElement {
   static get properties() {
     return {
       /**
+       * Texto header 1
+       */
+      header1Text:{ type: String },
+
+      /**
        * La url de la imagen 1
        */
-      image1Url: { type: String }
+      image1Url: { type: String },
 
     }
   }
 
   constructor() {
     super()
+    this.header1Text = "Kyojuro Rengoku"
     this.imageUrl = "https://imgsrv.crunchyroll.com/cdn-cgi/image/fit=contain,format=auto,quality=70,width=1200,height=675/catalog/crunchyroll/9a2089c84a76c3db3e51d0277f0433c9.jpg"
   }
 
   render() {
     return html`
+    <hl>${this.header1Text}</hl>
   <img src="${this.imageUrl}">`
   }
 
