@@ -12,42 +12,22 @@ export class MyElement extends LitElement {
   static get properties() {
     return {
       /**
-       * Copy for the read the docs hint.
+       * La url de la imagen 1
        */
-      docsHint: { type: String },
+     image1Url: { type: String }
 
-      /**
-       * The number of times the button has been clicked.
-       */
-      count: { type: Number },
     }
   }
 
   constructor() {
     super()
-    this.docsHint = 'Click on the Vite and Lit logos to learn more'
-    this.count = 0
+    this.imageUrl = "https://imgsrv.crunchyroll.com/cdn-cgi/image/fit=contain,format=auto,quality=70,width=1200,height=675/catalog/crunchyroll/9a2089c84a76c3db3e51d0277f0433c9.jpg"
   }
 
   render() {
     return html`
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src=${viteLogo} class="logo" alt="Vite logo" />
-        </a>
-        <a href="https://lit.dev" target="_blank">
-          <img src=${litLogo} class="logo lit" alt="Lit logo" />
-        </a>
-      </div>
-      <slot></slot>
-      <div class="card">
-        <button @click=${this._onClick} part="button">
-          count is ${this.count}
-        </button>
-      </div>
-      <p class="read-the-docs">${this.docsHint}</p>
-    `
-  }
+  <img src="${this.imageUrl}">
+  
 
   _onClick() {
     this.count++
