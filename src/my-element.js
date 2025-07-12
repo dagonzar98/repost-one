@@ -14,7 +14,7 @@ export class MyElement extends LitElement {
       /**
        * La url de la imagen 1
        */
-     image1Url: { type: String }
+      image1Url: { type: String }
 
     }
   }
@@ -26,8 +26,9 @@ export class MyElement extends LitElement {
 
   render() {
     return html`
-  <img src="${this.imageUrl}">
-  
+  <img src="${this.imageUrl}">`
+  }
+
 
   _onClick() {
     this.count++
